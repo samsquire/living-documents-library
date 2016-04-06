@@ -3,7 +3,11 @@
   "description": "Pension calculations",
   "author": "Sam Squire",
   "dependencies": {
-    "gross salary": "",
-    "salary sacrifice %": ""
+    "monthly sipp contributions": "",
+    "salary sacrifice %": "",
+    "gross annual salary": "",
+    "date of birth": ""
+  },
+  "outputs": {
   }
 }
