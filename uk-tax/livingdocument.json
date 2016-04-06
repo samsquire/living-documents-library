@@ -1,9 +1,9 @@
 {
-  "name": "uk tax",
+  "name": "uk-tax",
   "description": "UK Tax calculations",
   "author": "Sam Squire",
   "dependencies": {
-    "gross salary": "",
+    "gross annual salary": "",
     "salary sacrifice %": ""
-  } 
+  }
 }
