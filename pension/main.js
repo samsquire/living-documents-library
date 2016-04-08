@@ -4,8 +4,8 @@ function run (data) {
   var dateOfBirth = data["date of birth"];
   var grossAnnualSalary = data["gross annual salary"];
   return {
-    "annual pension contributions": grossAnnualSalary * (salarySacrifice / 100),
-    "tax advantage": (grossAnnualSalary * (salarySacrifice / 100)) * 0.8
+    "annual pension contributions": grossAnnualSalary * (salarySacrificePct / 100),
+    "tax advantage": (grossAnnualSalary * (salarySacrificePct / 100)) * 0.8
   }
 }
 
