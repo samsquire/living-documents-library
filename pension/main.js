@@ -3,9 +3,11 @@ function run (data) {
   var salarySacrificePct = parseInt(data["salary sacrifice %"]);
   var dateOfBirth = data["date of birth"];
   var grossAnnualSalary = data["gross annual salary"];
+  var pensionContribution = grossAnnualSalary * (salarySacrificePct / 100);
+
   return {
-    "annual pension contributions": grossAnnualSalary * (salarySacrificePct / 100),
-    "tax advantage": (grossAnnualSalary * (salarySacrificePct / 100)) * 0.8
+    "annual pension contributions": pensionContribution,
+    "tax advantage": pensionContribution * 0.2
   }
 }
 
