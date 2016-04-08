@@ -1,1 +1,1 @@
-module.exports = {'hi': 6}
+module.exports = require('./main');

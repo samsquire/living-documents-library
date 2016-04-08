@@ -1,11 +1,11 @@
 
 function run(data) {
 
-  var grossSalary = data["gross salary"];
-  var salarySacrificePct = data["salary sacrifice %"];
+  var grossSalary = parseInt(data["gross annual salary"]);
+  var salarySacrificePct = parseInt(data["salary sacrifice %"]);
 
   return {
-    "salary sacrifice amount": grossSalary * (parseInt(salarySacrificePct) / 100)
+    "salary sacrifice amount": grossSalary * (salarySacrificePct / 100)
   }
 }
 
