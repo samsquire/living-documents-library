@@ -1,0 +1,11 @@
+{
+  "name": "pension",
+  "description": "Pension calculations",
+  "author": "Sam Squire",
+  "dependencies": {
+    "stock purchase": ""
+  },
+  "outputs": {
+    "profit/loss": ""
+  }
+}
