@@ -1,6 +1,6 @@
 {
-  "name": "pension",
-  "description": "Pension calculations",
+  "name": "stocks",
+  "description": "stock calculations",
   "author": "Sam Squire",
   "dependencies": {
     "stock purchase": ""
