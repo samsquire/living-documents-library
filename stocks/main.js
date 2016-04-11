@@ -18,7 +18,13 @@ function run (data, callback) {
       callback(err);
       return;
     }
-    callback(null, data);
+    var buyCost = units * price;
+    var value = units * data.lastTradePriceOnly;
+    var growth = parseFloat(value / buycost) - 1;
+    callback(null, {
+      value: value,
+      growth: (growth.toFixed(2) * 100) + "% " + (growth < 1 ? "-" : "+")
+    });
   });
 
 }
