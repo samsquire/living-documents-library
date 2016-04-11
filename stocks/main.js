@@ -6,11 +6,17 @@ function run (data, callback) {
   var units = parseInt(purchase.questions[3].answer);
   var price = parseInt(purchase.questions[1].answer);
 
+  console.log(symbol);
+
   yahooFinance.snapshot({
     symbol: symbol,
     fields: ['s', 'n', 'd1', 'l1', 'y', 'r']
   }, function (err, data) {
-    callback(data);
+    if (err) {
+      callback(err);
+      return;
+    }
+    callback(null, data);
   });
 
 }

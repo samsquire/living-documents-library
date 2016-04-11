@@ -5,7 +5,7 @@ function run (data, callback) {
   var grossAnnualSalary = data["gross annual salary"];
   var pensionContribution = grossAnnualSalary * (salarySacrificePct / 100);
 
-  callback({
+  callback(null, {
     "annual pension contributions": pensionContribution,
     "tax advantage": pensionContribution * 0.2
   });
