@@ -23,11 +23,13 @@ function run (data, callback) {
     var growth = parseFloat(value / buyCost) - 1;
     var pounds = (value / 100).toFixed(2);
     var buyPounds = (buyCost / 100).toFixed(2);
+    var profit = value - buyCost;
+    var profitPounds = (profit / 100).toFixed(2);
     callback(null, {
       value: "£" + pounds,
       buyCost: "£" + buyPounds,
-      pct: growth,
-      growth: (growth < 1 ? "v" : "+") + (growth.toFixed(2) * 100) + "%"
+      growth: (growth < 0 ? "v" : "+") + (growth.toFixed(2) * 100) + "%",
+      profit: "£" + profitPounds
     });
   });
 
