@@ -1,4 +1,4 @@
-var yahooFinance = require('node-yahoo-finance');
+var yahooFinance = require('yahoo-finance');
 
 function run (data, callback) {
   var purchase = data["stock purchase"];
