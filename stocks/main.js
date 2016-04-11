@@ -6,7 +6,7 @@ function run (data, callback) {
 
   var symbol = purchase.questions[0].answer;
   var units = parseInt(purchase.questions[3].answer);
-  var price = parseInt(purchase.questions[1].answer);
+  var price = parseFloat(purchase.questions[1].answer);
 
   console.log(symbol);
 
@@ -21,10 +21,10 @@ function run (data, callback) {
     var buyCost = units * price;
     var value = units * data.lastTradePriceOnly;
     var growth = parseFloat(value / buyCost) - 1;
-    var pounds = value.toFixed(2) / 100;
+    var pounds = (value / 100).toFixed(2);
     callback(null, {
       value: "£" + pounds,
-      growth: (growth < 1 ? "-" : "+") + (growth.toFixed(2) * 100) + "%"
+      growth: (growth < 1 ? "v" : "+") + (growth.toFixed(2) * 100) + "%"
     });
   });
 
