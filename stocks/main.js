@@ -20,7 +20,7 @@ function run (data, callback) {
     }
     var buyCost = units * price;
     var value = units * data.lastTradePriceOnly;
-    var growth = parseFloat(value / buycost) - 1;
+    var growth = parseFloat(value / buyCost) - 1;
     callback(null, {
       value: value,
       growth: (growth.toFixed(2) * 100) + "% " + (growth < 1 ? "-" : "+")
