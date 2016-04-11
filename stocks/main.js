@@ -21,9 +21,10 @@ function run (data, callback) {
     var buyCost = units * price;
     var value = units * data.lastTradePriceOnly;
     var growth = parseFloat(value / buyCost) - 1;
+    var pounds = value.toFixed(2) / 100;
     callback(null, {
-      value: value,
-      growth: (growth.toFixed(2) * 100) + "% " + (growth < 1 ? "-" : "+")
+      value: "£" + pounds,
+      growth: (growth < 1 ? "-" : "+") + (growth.toFixed(2) * 100) + "%"
     });
   });
 
