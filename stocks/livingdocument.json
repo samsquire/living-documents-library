@@ -3,11 +3,11 @@
   "description": "stock calculations",
   "author": "Sam Squire",
   "time": {
-    "halfminutely": 30000
+    "hourly": 3600000
   },
   "dependencies": {
     "stock purchase": "",
-    "halfminutely": ""
+    "hourly": ""
   },
   "outputs": {
     "profit/loss": ""

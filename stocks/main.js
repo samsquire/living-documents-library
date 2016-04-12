@@ -1,8 +1,8 @@
 var yahooFinance = require('yahoo-finance');
 
 function run (data, callback) {
+  console.log(data);
   var purchase = data['stock purchase'];
-  console.log(purchase);
 
   var symbol = purchase.questions[0].answer;
   var units = parseInt(purchase.questions[3].answer);
