@@ -2,8 +2,12 @@
   "name": "stocks",
   "description": "stock calculations",
   "author": "Sam Squire",
+  "time": {
+    "halfminutely": 30000
+  },
   "dependencies": {
-    "stock purchase": ""
+    "stock purchase": "",
+    "halfminutely": ""
   },
   "outputs": {
     "profit/loss": ""
