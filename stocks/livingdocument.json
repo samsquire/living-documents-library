@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "stock purchase": "",
-    "hourly": ""
+    "threeminutes": ""
   },
   "outputs": {
     "profit/loss": ""
