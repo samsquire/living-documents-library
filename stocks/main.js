@@ -26,10 +26,12 @@ function run (data, callback) {
     var profit = value - buyCost;
     var profitPounds = (profit / 100).toFixed(2);
     callback(null, {
-      value: "£" + pounds,
-      buyCost: "£" + buyPounds,
-      growth: (growth < 0 ? "v" : "+") + (growth.toFixed(2) * 100) + "%",
-      profit: "£" + profitPounds
+        "profit/loss": {
+        value: "£" + pounds,
+        buyCost: "£" + buyPounds,
+        growth: (growth < 0 ? "v" : "+") + (growth.toFixed(2) * 100) + "%",
+        profit: "£" + profitPounds
+      }
     });
   });
 
