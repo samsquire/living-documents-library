@@ -11,4 +11,6 @@ function run (data, callback) {
   });
 }
 
-module.exports = run;
+module.exports = {
+  run: run
+};

@@ -27,6 +27,7 @@ function run (data, callback) {
     var profitPounds = (profit / 100).toFixed(2);
     callback(null, {
         "profit/loss": {
+        type: "buy",
         value: "£" + pounds,
         buyCost: "£" + buyPounds,
         growth: (growth < 0 ? "v" : "+") + (growth.toFixed(2) * 100) + "%",
@@ -37,4 +38,20 @@ function run (data, callback) {
 
 }
 
-module.exports = run;
+function view(previous, current) {
+
+  var stocks = ('stocks' in previous ? previous.stocks : []); 
+  stocks.push(current);
+
+  return {
+    stocks: stocks
+  }
+
+}
+
+module.exports = {
+
+  run: run,
+  view: view
+
+}
