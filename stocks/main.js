@@ -42,6 +42,8 @@ function run (data, callback) {
 }
 
 function diff(lastStock, nextStock) {
+  console.log("comparing", lastStock.symbol, nextStock.symbol);
+  console.log("comparing", lastStock.updated, nextStock.updated);
   if (lastStock.symbol !== nextStock.symbol) {
     return false;
   }
