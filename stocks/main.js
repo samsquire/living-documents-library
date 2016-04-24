@@ -2,14 +2,12 @@ var yahooFinance = require('yahoo-finance');
 var _ = require('lodash');
 
 function run (data, callback) {
-  console.log(data);
   var purchase = data['stock purchase'];
 
   var symbol = purchase.questions[0].answer;
   var units = parseInt(purchase.questions[3].answer);
   var price = parseFloat(purchase.questions[1].answer);
 
-  console.log(symbol);
 
   yahooFinance.snapshot({
     symbol: symbol,
