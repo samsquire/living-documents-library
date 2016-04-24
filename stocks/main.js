@@ -33,11 +33,19 @@ function run (data, callback) {
         value: "£" + pounds,
         buyCost: "£" + buyPounds,
         growth: (growth < 0 ? "v" : "+") + (growth.toFixed(2) * 100) + "%",
-        profit: "£" + profitPounds
+        profit: "£" + profitPounds,
+        updated: new Date()
       }
     });
   });
 
+}
+
+function diff(lastStock, nextStock) {
+  if (lastStock.symbol !== nextStock.symbol) {
+    return false;
+  }
+  return nextStock.update - lastStock.update;
 }
 
 function view(previous, current) {
@@ -46,7 +54,7 @@ function view(previous, current) {
   stocks.push(current['profit/loss']);
 
   return {
-    stocks: stocks
+    stocks: _.uniqWith(stocks, diff)
   }
 
 }
