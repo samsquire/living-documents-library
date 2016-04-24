@@ -42,10 +42,11 @@ function run (data, callback) {
 }
 
 function diff(previous, current, symbol) {
- return _(previous).concat(
+ return _(previous).push(
           _(current)
           .orderBy(current, ['updated'], ['desc'])
-          .first().value()
+          .first()
+          .value()
         ).value();
 }
 
