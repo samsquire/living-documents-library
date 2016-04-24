@@ -28,6 +28,7 @@ function run (data, callback) {
     var profitPounds = (profit / 100).toFixed(2);
     callback(null, {
         "profit/loss": {
+        symbol: symbol,
         type: "buy",
         value: "£" + pounds,
         buyCost: "£" + buyPounds,
@@ -42,10 +43,10 @@ function run (data, callback) {
 function view(previous, current) {
 
   var stocks = ('stocks' in previous ? previous.stocks : []);
-  stocks.push(current);
+  stocks.push(current['profit/loss']);
 
   return {
-    stocks: _.unionBy(stocks, 'id')
+    stocks: stocks
   }
 
 }
