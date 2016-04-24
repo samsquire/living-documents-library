@@ -47,7 +47,7 @@ function diff(lastStock, nextStock) {
   if (lastStock.symbol !== nextStock.symbol) {
     return false;
   }
-  return nextStock.update - lastStock.update;
+  return nextStock.update > lastStock.update;
 }
 
 function view(previous, current) {
