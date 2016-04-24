@@ -3,11 +3,10 @@
   "description": "stock calculations",
   "author": "Sam Squire",
   "time": {
-    "1minute": 60000
+    "stock purchase": 60000
   },
   "dependencies": {
     "stock purchase": "",
-    "1minute": ""
   },
   "outputs": {
     "profit/loss": ""
