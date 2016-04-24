@@ -49,7 +49,6 @@ function diff(previous, current, symbol) {
 }
 
 function view(previous, current) {
-  console.log("previous", previous);
   var stocks = ('stocks' in previous ? previous.stocks : []);
   stocks.push(current['profit/loss']);
   var bySymbol = _.groupBy(stocks, 'symbol')
