@@ -52,9 +52,11 @@ function view(previous, current) {
   console.log("previous", previous);
   var stocks = ('stocks' in previous ? previous.stocks : []);
   stocks.push(current['profit/loss']);
-
+  var bySymbol = _.groupBy(stocks, 'symbol')
+  console.log(bySymbol);
+  // _.reduce(bySymbol, diff, [])
   return {
-    stocks: _.reduce(_.groupBy(stocks, 'symbol'), diff, [])
+    stocks: []
   }
 
 }
