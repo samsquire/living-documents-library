@@ -44,7 +44,7 @@ function run (data, callback) {
 function diff(previous, current, symbol) {
  return _(previous).push(
           _(current)
-          .orderBy(current, ['updated'], ['desc'])
+          .orderBy(['updated'], ['desc'])
           .first()).value();
 }
 
@@ -53,10 +53,9 @@ function view(previous, current) {
   var stocks = ('stocks' in previous ? previous.stocks : []);
   stocks.push(current['profit/loss']);
   var bySymbol = _.groupBy(stocks, 'symbol')
-  console.log(bySymbol);
-  // _.reduce(bySymbol, diff, [])
+  var byRecency = _.reduce(bySymbol, diff, []);
   return {
-    stocks: []
+    stocks: byRecency
   }
 
 }
