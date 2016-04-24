@@ -44,10 +44,10 @@ function run (data, callback) {
 function diff(lastStock, nextStock) {
   console.log("comparing", lastStock.symbol, nextStock.symbol);
   console.log("comparing", lastStock.updated, nextStock.updated);
-  if (lastStock.symbol !== nextStock.symbol) {
-    return false;
+  if (lastStock.symbol === nextStock.symbol) {
+    return (nextStock.update > lastStock.update);
   }
-  return nextStock.update > lastStock.update;
+  return true;
 }
 
 function view(previous, current) {
