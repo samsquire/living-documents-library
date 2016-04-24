@@ -1,4 +1,5 @@
 var yahooFinance = require('yahoo-finance');
+var _ = require('lodash');
 
 function run (data, callback) {
   console.log(data);
@@ -40,11 +41,11 @@ function run (data, callback) {
 
 function view(previous, current) {
 
-  var stocks = ('stocks' in previous ? previous.stocks : []); 
-  stocks.push(current);
+  var stocks = ('stocks' in previous ? previous.stocks : []);
+  stocks.push(current["stock purchase"]);
 
   return {
-    stocks: stocks
+    stocks: _.unionBy(stocks, 'id')
   }
 
 }

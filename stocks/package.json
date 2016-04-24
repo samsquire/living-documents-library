@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "yahoo-finance": "^0.2.12"
+    "yahoo-finance": "^0.2.12",
+    "lodash": "^4.6.1"
   }
 }
