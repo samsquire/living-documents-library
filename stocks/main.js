@@ -45,8 +45,8 @@ function diff(previous, current, symbol) {
  return _(previous).concat(
           _(current)
           .orderBy(current, ['updated'], ['desc'])
-          .first()
-        );
+          .first().value()
+        ).value();
 }
 
 function view(previous, current) {
