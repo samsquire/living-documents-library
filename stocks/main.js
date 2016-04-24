@@ -41,7 +41,7 @@ function run (data, callback) {
 }
 
 function view(previous, current) {
-
+  console.log("previous", previous);
   var stocks = ('stocks' in previous ? previous.stocks : []);
   stocks.push(current['profit/loss']);
 
