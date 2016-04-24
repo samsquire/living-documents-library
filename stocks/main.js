@@ -41,13 +41,12 @@ function run (data, callback) {
 
 }
 
-function diff(lastStock, nextStock) {
-  console.log("comparing", lastStock.symbol, nextStock.symbol);
-  console.log("comparing", lastStock.updated, nextStock.updated);
-  if (lastStock.symbol === nextStock.symbol) {
-    return (nextStock.update > lastStock.update);
-  }
-  return true;
+function diff(previous, current, symbol) {
+ return _(previous).concat(
+          _(current)
+          .orderBy(current, ['updated'], ['desc'])
+          .first()
+        );
 }
 
 function view(previous, current) {
@@ -56,7 +55,7 @@ function view(previous, current) {
   stocks.push(current['profit/loss']);
 
   return {
-    stocks: _.uniqWith(stocks, diff)
+    stocks: _.reduce(_.groupBy(stocks, 'symbol'), diff, [])
   }
 
 }
