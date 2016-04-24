@@ -42,7 +42,7 @@ function run (data, callback) {
 function view(previous, current) {
 
   var stocks = ('stocks' in previous ? previous.stocks : []);
-  stocks.push(current["stock purchase"]);
+  stocks.push(current);
 
   return {
     stocks: _.unionBy(stocks, 'id')
