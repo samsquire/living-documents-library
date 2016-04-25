@@ -11,7 +11,7 @@
   "outputs": {
     "profit/loss": ""
   },
-  "displayMode": {
+  "displayModes": {
     "stocks": "table"
   }
 }
