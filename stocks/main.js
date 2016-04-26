@@ -30,7 +30,7 @@ function run (data, callback) {
         type: "buy",
         value: "£" + pounds,
         buyCost: "£" + buyPounds,
-        growth: (growth < 0 ? "v" : "+") + (growth.toFixed(2) * 100) + "%",
+        growth: (growth < 0 ? "" : "+") + (growth.toFixed(2) * 100) + "%",
         profit: "£" + profitPounds,
         updated: new Date()
       }
