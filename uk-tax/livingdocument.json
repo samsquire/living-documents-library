@@ -3,10 +3,18 @@
   "description": "UK Tax calculations",
   "author": "Sam Squire",
   "dependencies": {
-    "gross annual salary": "",
-    "salary sacrifice %": "",
-    "has student loan": "",
-    "tax advantage": ""
+    "gross annual salary": {
+      "question": "What is your gross annual salary?"
+    },
+    "salary sacrifice %": {
+      "question": "How much of your salary do you sacrifice into your pension?"
+    },
+    "has student loan": {
+      "question": "Do you have a student loan?"
+    },
+    "tax advantage": {
+      "question":: "What tax are you getting back"
+    }
   },
   "outputs": {
     "salary sacrifice amount": "",
