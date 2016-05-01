@@ -13,7 +13,7 @@
       "question": "Do you have a student loan?"
     },
     "tax advantage": {
-      "question":: "What tax are you getting back"
+      "question": "What tax are you getting back"
     }
   },
   "outputs": {
